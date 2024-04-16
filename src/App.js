@@ -1,47 +1,34 @@
-import logo from './logoips_poli.webp';
+import React, { Suspense, lazy} from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
+
+const Home = lazy(() => import('./components/Home/Home'));
+const Begin = lazy(() => import('./components/Begin'));
+const Entry = lazy(() => import('./components/Entry/Entry'));
+
+// Comentario corregido sobre la inclusión del archivo Startbutton
 function App() {
   return (
-    <div className="App">
-
+    <Router>
+      <Suspense fallback={<div>Loading...</div>}>
+        <div className="App">
+          <header className="App-header">
+            
+            <Routes>
+              <Route path="/" element={<Begin />} />
+              <Route path="/Entry" element={<Entry />} />
+              <Route path="/Home" element={<Home />} />
+            </Routes>
+          </header>
       
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
       
-
-
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Pagina para proyecto Frontend del Poli.
-        </p>
-        <TodoItem />
-        <Noticias />
+        </div> 
+      </Suspense>
         
-      </header>
-    </div>
+    </Router>
+    
   );
 }
 
-function Noticias () {
-  return (
-    <li>
-      <p>Servicio X</p>
-    </li>
-  );
-
-}
-function TodoItem () {
-  return (
-    <li>
-      <span>V</span>
-      <p>Historia 1</p>
-      <span>X</span>
-    </li>
-  );
-}
 export default App;

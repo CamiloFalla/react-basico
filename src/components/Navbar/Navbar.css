@@ -1,0 +1,21 @@
+/* Estilos para móvil */
+.Navbar {
+    display: none; /* Oculto por defecto */
+}
+
+/* Estilos para tablets y escritorios */
+@media (min-width: 768px) {
+    .Navbar {
+        display: flex; /* Visible en pantallas más grandes */
+        /* otros estilos específicos para la navegación en pantalla grande */
+    }
+}
+
+/* Estilos para móvil cuando sea necesario mostrarlo */
+@media (max-width: 767px) {
+    .Navbar {
+        display: block; /* Hacerlo visible en móvil */
+        /* Estilos específicos para móvil */
+    }
+}
+  
