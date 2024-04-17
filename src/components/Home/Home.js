@@ -3,18 +3,20 @@ import Navbar from '../Navbar/Navbar';
 import './Home.css';
 import PreviewMainfo from '../PreviewMaininfo/PreviewMaininfo';
 import Infoshow from '../Infoshow/Infoshow';
-import Bottonfocus from '../Bottonfocus/Bottonfocus';
+import BottonfocusQuestion from '../BottonfocusQuestion/BottonfocusQuestion';
+import BottonfocusMoney from '../BottonfocusMoney/BottonfocusMoney';
 import imageSrc from './../../images/imagescontent/almuerzopic.webp';
 import logoips from './../../images/logos/logoips_poli.webp';
 import guantes from './../../images/imagescontent/guantes.webp';
 import aula from './../../images/imagescontent/capacitation.webp';
-import payes from './../../images/icons/money1.svg'
-import question from './../../images/icons/question1.svg'
+import Setobilebar from './../Setmobilebar/Setmobilebar';
+
 
 function Home() {
   return (
     <div className="homepart">
       <div className="navbar-home">
+        <Setobilebar />
         <Navbar />
         <div className='navbar-home-title'>
           <h1>Bienvenid@</h1>
@@ -38,12 +40,10 @@ function Home() {
         />
       </div>
       <div className="home-buttonfocus">
-        <Bottonfocus 
-          icon={question}
+        <BottonfocusQuestion
           text="Preguntas frecuentes"
         />
-        <Bottonfocus 
-          icon={payes}
+        <BottonfocusMoney
           text="Metodos de pago"
         />
       </div>

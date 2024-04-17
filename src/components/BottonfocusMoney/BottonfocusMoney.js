@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Bottonfocus.css';
+import './BottonfocusMoney.css';
+import { ReactComponent as IconSVG } from './../../images/icons/money1.svg';
 
-function Bottonfocus ({ icon, text }) {
+function BottonfocusMoney ({ text }) {
     return (
         <div>
             <button className="button-focus-container">
                 <div className="buttonfocus-content">
                     <div className="icon-container">
-                        <img src={icon} alt="Descripción" />
+                        <IconSVG fill="yellow" />  {/* Aplica el fill directamente aquí */}
                     </div>
-                    <div className="text-icon-container">
+                    <div className="buttonfocus-text-container">
                         <p>{text}</p>
                     </div>
                 </div>
@@ -19,5 +20,9 @@ function Bottonfocus ({ icon, text }) {
     );
 }
 
-export default Bottonfocus;
+export default BottonfocusMoney ;
+
+
+
+
 
