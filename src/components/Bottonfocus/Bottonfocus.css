@@ -1,0 +1,27 @@
+/* Bottonfocus.css */
+.button-focus-container {
+    display: flex;
+    align-items: center;  /* Alinea verticalmente el contenido del botón */
+    justify-content: center; /* Centra horizontalmente el contenido dentro del botón */
+    background-color: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    cursor: pointer;
+}
+
+.buttonfocus-content {
+    display: flex;
+    align-items: center;
+}
+
+.icon-container img {
+    fill: yellow; /* Esto no funcionará si el SVG no está inline. Ver nota abajo. */
+    width: 30px; /* Ajuste de tamaño de imagen */
+    height: 30px;
+}
+
+.text-icon-container p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold; /* Texto en negrita */
+    color: black; /* Color de texto */
+    margin-left: 10px; /* Espacio entre imagen y texto */
+}

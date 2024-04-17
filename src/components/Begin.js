@@ -5,11 +5,15 @@ import { Startbutton } from './Startbutton';
 function Begin () {
     return (
         <div>
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-            Pagina para proyecto Frontend del Poli.
-            </p>
-            <Startbutton />
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                <p>
+                Pagina para proyecto Frontend del Poli.
+                </p>
+                <Startbutton />
+            
+            </header>
+            
         </div>
         
     );

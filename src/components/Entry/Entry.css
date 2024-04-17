@@ -2,6 +2,8 @@
 
 /* Entry.css */
 .entry-container {
+  background-color: #0185B6;
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,6 +11,10 @@
   min-height: 50px;
   width: 100%; /* Asegura que el contenedor use todo el ancho disponible */
   text-align: center;
+  min-height: 100vh;
+  
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
 }
 
 .entry-container form {
